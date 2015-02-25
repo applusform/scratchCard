@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Created by ApplusForm.com on 2014.3.26 
+
+	Permission is granted to copy, distribute, modify under the terms of ApplusForm License.
+
+	Copyright (C) 2014 ApplusForm.com. All rights reserved.
+ --> 
+<MOML version="1.1.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_ui.xsd">
+    <THEMES>
+        <THEME element="LABEL" fontSize="30"/>
+        
+    </THEMES>
+	<UILAYOUT portrait="720,1230" landscape="720,1230">
+		<WINDOW layout="0,0,720,1230" align="linear:center" img="#ffffff">
+			<PAINT id="paint" layout="600sr,600sr" defaultImg="bg.png" />
+		</WINDOW>
+		
+    </UILAYOUT>
+
+	<CMD cmd="function.init"/>
+	<FUNCTION id="init">
+		<CMD cmd="imgData = base64.read('black.png')" />
+		<CMD cmd="paint.paintData = imgData" />
+		<CMD cmd="paint.erase()" />
+		<CMD cmd="paint.thickness = 50" />
+	</FUNCTION>
+</MOML>
